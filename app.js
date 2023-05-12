@@ -34,14 +34,12 @@ app.post("/", function (req, res) {
 
     var jsonData = JSON.stringify(data);
 
-    // API 600a9d3b5560bd931d6d47b8cb625f46-us11
-    // ID 79117d76cb
 
     var options = {
         url: process.env.URL,
         method: "POST",
         headers: {
-            "Authorization": "bright07 600a9d3b5560bd931d6d47b8cb625f46-us11"
+            "Authorization": process.env.AUTHORIZATION
         },
         body: jsonData
     };
